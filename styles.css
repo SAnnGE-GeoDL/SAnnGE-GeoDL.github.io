@@ -14,22 +14,18 @@ body {
 
 .top-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 60px;
   background-color: #ffffff;
   z-index: 1000;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
   box-sizing: border-box;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .header-logo {
@@ -59,19 +55,17 @@ body {
   bottom: 0;
   left: 0;
   width: 220px;
-  background-color: #f8f9fa;
+  background-color: #f9f9f9;
   border-right: 1px solid #e0e0e0;
-  padding: 1rem;
   overflow-y: auto;
   box-sizing: border-box;
 }
 
 .content {
   margin-left: calc(220px + 2rem);
-  padding: 2rem 2rem 2rem 2rem;
   flex: 1;
   box-sizing: border-box;
-  background-color: #fafafa;
+  background-color: #f9f9f9;
 }
 
 /* Logo */
@@ -113,9 +107,8 @@ h1, h2, h3 {
 /* Footer */
 footer {
   /* margin-left: calc(220px + 2rem); */
-  padding: 1rem 2rem;
   border-top: 1px solid #eee;
-  background-color: #f1f1f1;
+  background-color: #e1e1e1;
   color: #666;
   box-sizing: border-box;
 }
