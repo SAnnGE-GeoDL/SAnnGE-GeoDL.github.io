@@ -15,16 +15,16 @@ body {
 .top-header {
   position: fixed;
   top: 0;
-  left: 2rem;
-  right: 2rem;
+  left: 0;
+  right: 0;
   height: 60px;
-  width: auto;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
   z-index: 1000;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .header-content {
@@ -55,24 +55,23 @@ body {
 }
 
 .sidebar {
-  width: auto;
-  /* background-color: #f8f9fa; */
-  /* border-right: 1px solid #e0e0e0; */
-  height: calc(100vh - 60px);
   position: fixed;
   top: 60px;
-  bottom: 60px;
-  left: 2rem;
-  right: 2rem;
-  overflow-y: auto;
-  padding: 1rem;
+  bottom: 0;
+  left: 2rem;       /* match header padding */
+  width: 220px;     /* fixed width */
+  background-color: #f8f9fa;
   border-right: 1px solid #e0e0e0;
+  padding: 1rem;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .content {
-  margin-left: calc(200px + 2rem);
-  padding: 2rem 0;
+  margin-left: calc(220px + 2rem);
+  padding: 2rem 2rem 2rem 2rem;
   flex: 1;
+  box-sizing: border-box;
 }
 
 /* Logo */
@@ -112,13 +111,21 @@ h1, h2, h3 {
 
 /* Footer */
 footer {
-  width: auto;
-  margin-left: 240px;
+  margin-left: calc(220px + 2rem);
   padding: 1rem 2rem;
-  font-size: 0.9rem;
   border-top: 1px solid #eee;
-  color: #666;
   background-color: #fafafa;
+  color: #666;
+  box-sizing: border-box;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 /* Optional: subtle link styling in content */
