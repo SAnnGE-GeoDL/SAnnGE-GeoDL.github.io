@@ -8,21 +8,23 @@
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="/assets/images/logo.png" alt="SAnnGE Logo" height="60" />
-    </div>
-    <nav>
-      <a href="/">Home</a> |
-      <a href="/methodology.html">Methodology</a> |
-      <a href="/results.html">Results</a> |
-      <a href="/usage.html">Usage</a>
-    </nav>
-  </header>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="/assets/images/logo.png" alt="SAnnGE Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/methodology.html">Methodology</a>
+        <a href="/results.html">Results</a>
+        <a href="/usage.html">Usage</a>
+      </nav>
+    </aside>
 
-  <main class="container">
-    {{ content }}
-  </main>
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
 
   <footer>
     <p>© 2025 SAnnGE GeoDL — Maintained by <a href="https://github.com/SAnnGE-GeoDL">SAnnGE-GeoDL</a></p>
