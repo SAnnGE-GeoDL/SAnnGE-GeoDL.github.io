@@ -2,3 +2,10 @@ title: Sliding Annulus Graph Embedding (SAnnGE)
 description: Documentation for the Sliding Annulus Graph Embedding project in GeoDL
 theme: null
 markdown: kramdown
+
+# defaults:
+#   - scope:
+#       path: ""
+#       name: "search.json"
+#     values:
+#       layout: null

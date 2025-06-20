@@ -15,7 +15,14 @@
       <a href="/">
         <img src="/assets/images/logo.png" alt="SAnnGE Logo" class="header-logo" />
       </a>
-      <span class="header-title">SAnnGE GeoDL</span>
+      <a href="/">
+        <span class="header-title">SAnnGE</span>
+      </a>
+      <!-- Search Bar -->
+      <!-- <div class="header-right"> 
+        <input type="text" id="search-input" placeholder="Search..." />
+        <ul id="search-results" class="search-results"></ul>
+      </div> -->
     </div>
   </header>
 
@@ -41,3 +48,40 @@
 </body>
 
 </html>
+
+<script>
+  const pages = [
+    { title: "Home", url: "/", content: "Welcome to the official documentation for the Sliding Annulus Graph Embedding..." },
+    { title: "Methodology", url: "/methodology.html", content: "Understand the core techniques and algorithms..." },
+    { title: "About", url: "/about.html", content: "Learn more about the project and contributors..." },
+    // Add more pages or generate this JSON with Jekyll plugins
+  ];
+
+  const input = document.getElementById("search-input");
+  const results = document.getElementById("search-results");
+
+  input.addEventListener("input", function () {
+    const query = this.value.trim().toLowerCase();
+
+    if (!query) {
+      results.style.display = "none";
+      results.innerHTML = "";
+      return;
+    }
+
+    const matches = pages.filter(p =>
+      p.title.toLowerCase().includes(query) || p.content.toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+      results.style.display = "none";
+      results.innerHTML = "";
+      return;
+    }
+
+    results.innerHTML = matches
+      .map(r => `<li><a href="${r.url}">${r.title}</a></li>`)
+      .join('');
+    results.style.display = "block";
+  });
+</script>

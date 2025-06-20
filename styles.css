@@ -17,32 +17,74 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background-color: #fdcfcb;
+  height: 80px;
+  background-color: #fff0f0;
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
-  padding-left: 2rem; /* Left padding inside header */
-  padding-right: 1rem;
+  padding-left: 7rem; /* Left padding inside header */
+  padding-right: 3rem;
   z-index: 1000;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  width: 100%;
+  gap: 12rem; /* Just guessed, maybe breaks on other devices? */
+}
+.header-content a {
+  text-decoration: none;
 }
 
 .header-logo {
-  height: 40px;
+  height: 70px;
   display: block;
 }
 
 .header-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: #222;
 }
+
+/* #search-input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1001;
+  display: none;
+}
+
+.search-results li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+#search-results li a {
+  text-decoration: none;
+  color: #222;
+  display: block;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+} */
+
 
 /* Wrapper for sidebar and main */
 .wrapper {
@@ -54,15 +96,13 @@ body {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  top: 60px; /* below header */
-  bottom: 40px; /* above footer */
+  top: 80px; /* below header */
+  bottom: auto; /* above footer */
   left: 0;
-  width: 240px;
-  background-color: #ffdfdd;
-  border-right: 1px solid #e0e0e0;
-  padding-left: 2rem; /* match header/footer left padding */
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  width: 300px;
+  background-color: #fff9f8;
+  /* border-right: 1px solid #e0e0e0; */
+  padding: 4rem 3rem 1rem 7rem;
   overflow-y: auto;
 }
 
@@ -88,9 +128,9 @@ body {
 
 /* Main content */
 .content {
-  margin-left: 240px; /* sidebar width */
-  padding: 2rem 2rem 2rem 2rem;
-  background-color: #ffffff;
+  margin-left: 300px; /* sidebar width */
+  padding: 4rem 16rem 4rem 6rem;
+  background-color: #fff9f8;
   flex-grow: 1;
   min-height: calc(100vh - 60px - 40px);
   overflow-wrap: break-word;
@@ -115,7 +155,7 @@ footer {
   height: 40px;
   background-color: #e1e1e1;
   border-top: 1px solid #ccc;
-  padding-left: 2rem; /* left padding inside footer */
+  padding-left: 5rem; /* left padding inside footer */
   display: flex;
   align-items: center;
   color: #666;
